@@ -1,0 +1,120 @@
+:root {
+    --primary-bg: #e91e63; /* Pink background */
+    --card-bg: #ffffff;    /* White card background */
+    --main-blue: #0d47a1;  /* Dark blue button/text color */
+    --text-color: #333333; /* Dark text */
+}
+
+body {
+    background-color: var(--primary-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Card Styling */
+.header-card {
+    background-color: var(--card-bg);
+    border-radius: 25px; /* More rounded ends for the pill shape */
+    padding: 10px 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-card h1 {
+    font-size: 24px;
+    color: var(--main-blue);
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Game Card Styling */
+.game-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    color: var(--text-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.instruction {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+#guessInput {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid var(--main-blue);
+    border-radius: 5px;
+    font-size: 24px;
+    text-align: center;
+    outline: none;
+}
+
+/* Hint Text Styling */
+.hint-text {
+    font-size: 18px;
+    min-height: 25px; /* Ensures layout doesn't jump */
+    margin-top: 5px;
+    margin-bottom: 25px;
+    color: #444; /* Default hint color */
+}
+
+/* Button Styling */
+#checkButton, #restartButton {
+    background-color: var(--main-blue);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+#checkButton:hover, #restartButton:hover {
+    background-color: #0b3a7c;
+}
+
+/* Chances Text Styling */
+.chances-text {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Utility Class for hiding elements */
+.hidden {
+    display: none !important;
+}
+
+/* Styling for win/loss states */
+.win {
+    color: green !important;
+    font-weight: bold;
+}
+
+.lose {
+    color: red !important;
+    font-weight: bold;
+}
